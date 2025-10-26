@@ -9,7 +9,7 @@ interface Referral {
 }
 
 const ReferralPage = () => {
-  const { profile, remoteConfigValues } = useAuth();
+  const { profile } = useAuth();
   const [referrals, setReferrals] = useState<Referral[]>([]);
 
   useEffect(() => {
@@ -30,15 +30,6 @@ const ReferralPage = () => {
 
     fetchReferrals();
   }, [profile]);
-
-  if (!remoteConfigValues?.referral_feature_enabled) {
-    return (
-      <div className="p-4">
-        <h1 className="text-2xl font-bold">Referral Program</h1>
-        <p>The referral program is not currently available. Please check back later.</p>
-      </div>
-    );
-  }
 
   return (
     <div className="p-4">

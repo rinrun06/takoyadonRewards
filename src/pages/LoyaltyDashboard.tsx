@@ -13,46 +13,51 @@ interface Reward {
 }
 
 interface Activity {
-  id: number;
-  activity_type: string;
-  points_earned: number;
+  description: string;
+  points: number;
   created_at: string;
 }
 
+interface DashboardData {
+  loyalty_points: number;
+  rank: string;
+  recent_activities: Activity[];
+  rewards_catalog: Reward[];
+}
+
 export default function LoyaltyDashboard() {
-  const { profile, remoteConfigValues } = useAuth();
-  const [rewards, setRewards] = useState<Reward[]>([]);
-  const [activities, setActivities] = useState<Activity[]>([]);
+  const { profile } = useAuth();
+  const [dashboardData, setDashboardData] = useState<DashboardData | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchRewards = async () => {
-      const { data, error } = await supabase.from('rewards').select('*');
-      if (data) setRewards(data);
-      if (error) console.error('Error fetching rewards:', error);
-    };
-
-    const fetchActivities = async () => {
+    const fetchDashboardData = async () => {
       if (profile) {
-        const { data, error } = await supabase
-          .from('activities')
-          .select('*')
-          .eq('user_id', profile.id)
-          .order('created_at', { ascending: false });
-        if (data) setActivities(data);
-        if (error) console.error('Error fetching activities:', error);
+        try {
+          setLoading(true);
+          const { data, error } = await supabase.rpc('get_customer_dashboard_data', { p_user_id: profile.id });
+          if (error) {
+            console.error('Error fetching dashboard data:', error);
+          } else {
+            setDashboardData(data);
+          }
+        } finally {
+          setLoading(false);
+        }
       }
     };
 
-    fetchRewards();
-    fetchActivities();
+    fetchDashboardData();
   }, [profile]);
 
-  const loyaltyData = profile || { loyalty_points: 0 };
-  // Make sure loyalty_points is not undefined or null
-  const currentPoints = loyaltyData.loyalty_points || 0;
+  if (loading) {
+    return <Layout><div className="p-4">Loading...</div></Layout>;
+  }
+
+  const { loyalty_points = 0, rank, recent_activities = [], rewards_catalog = [] } = dashboardData || {};
   const nextRewardTier = 500;
-  const pointsToNextReward = Math.max(0, nextRewardTier - currentPoints);
-  const progressPercentage = Math.min((currentPoints / nextRewardTier) * 100, 100);
+  const pointsToNextReward = Math.max(0, nextRewardTier - loyalty_points);
+  const progressPercentage = Math.min((loyalty_points / nextRewardTier) * 100, 100);
 
   return (
     <Layout>
@@ -62,13 +67,13 @@ export default function LoyaltyDashboard() {
           <div className="md:col-span-8">
             <div className="bg-white shadow-lg rounded-lg p-6">
               <h1 className="text-3xl font-bold mb-4 text-gray-800">Your Loyalty Dashboard</h1>
-              
+
               {/* Loyalty Points Card */}
               <div className="bg-white shadow-md rounded-lg mb-6 p-4">
-                <h3 className="text-xl font-semibold text-gray-700">Loyalty Points</h3>
+                <h3 className="text-xl font-semibold text-gray-700">Loyalty Points (Rank: {rank})</h3>
                 <div className="flex items-center my-2">
                   <span className="text-yellow-400 text-3xl mr-2">★</span>
-                  <p className="text-4xl font-bold text-gray-800">{currentPoints}</p>
+                  <p className="text-4xl font-bold text-gray-800">{loyalty_points}</p>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2.5">
                   <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: `${progressPercentage}%` }}></div>
@@ -77,27 +82,25 @@ export default function LoyaltyDashboard() {
               </div>
 
               {/* Referral Card */}
-              {remoteConfigValues?.referral_feature_enabled && (
-                <div className="bg-white shadow-md rounded-lg mb-6 p-4">
-                  <h3 className="text-xl font-semibold text-gray-700">Refer a Friend</h3>
-                  <p className="text-gray-600 my-2">Earn points by referring your friends!</p>
-                  <Link to="/referral" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2 inline-block">
-                    Go to Referral Page
-                  </Link>
-                </div>
-              )}
+              <div className="bg-white shadow-md rounded-lg mb-6 p-4">
+                <h3 className="text-xl font-semibold text-gray-700">Refer a Friend</h3>
+                <p className="text-gray-600 my-2">Earn points by referring your friends!</p>
+                <Link to="/referral" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2 inline-block">
+                  Go to Referral Page
+                </Link>
+              </div>
 
               {/* Recent Activity */}
               <div>
                 <h2 className="text-2xl font-bold mb-4 text-gray-800">Recent Activity</h2>
                 <div className="space-y-2">
-                  {activities.map(activity => (
-                    <div key={activity.id} className="bg-white shadow-md rounded-lg p-4 flex justify-between items-center">
+                  {recent_activities.map((activity, index) => (
+                    <div key={index} className="bg-white shadow-md rounded-lg p-4 flex justify-between items-center">
                       <div>
-                        <p className="text-base font-medium text-gray-800">{activity.activity_type}</p>
+                        <p className="text-base font-medium text-gray-800">{activity.description}</p>
                         <p className="text-sm text-gray-500">{new Date(activity.created_at).toLocaleDateString()}</p>
                       </div>
-                      <div className="text-green-500 font-bold text-lg">+{activity.points_earned} PTS</div>
+                      <div className="text-green-500 font-bold text-lg">+{activity.points} PTS</div>
                     </div>
                   ))}
                 </div>
@@ -110,9 +113,9 @@ export default function LoyaltyDashboard() {
             <div className="bg-white shadow-lg rounded-lg p-6">
               <h2 className="text-2xl font-bold mb-4 text-gray-800">Available Rewards</h2>
               <div className="space-y-4">
-                {rewards.map(reward => (
+                {rewards_catalog.map(reward => (
                   <div key={reward.id} className="bg-white shadow-md rounded-lg overflow-hidden">
-                    {reward.image_url && <img src={reward.image_url} alt={reward.name} className="w-full h-32 object-cover"/>}
+                    {reward.image_url && <img src={reward.image__url} alt={reward.name} className="w-full h-32 object-cover"/>}
                     <div className="p-4">
                         <h3 className="text-xl font-semibold text-gray-800">{reward.name}</h3>
                         <p className="text-sm text-gray-500 my-1">{reward.description}</p>

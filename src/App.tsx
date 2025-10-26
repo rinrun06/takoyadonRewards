@@ -44,15 +44,21 @@ import ReportsPage from "./pages/admin/Reports";
 import EditProfilePage from "./pages/admin/EditProfile";
 import Dashboard from "./pages/Dashboard";
 
-// A higher-order component to handle private routes
-const PrivateRoute = ({ children, roles, redirectTo = '/customer/login' }: { children: JSX.Element, roles?: string[], redirectTo?: string }) => {
+// Higher-order component for private routes
+const PrivateRoute = ({
+  children,
+  roles,
+  redirectTo = "/customer/login",
+}: {
+  children: JSX.Element;
+  roles?: string[];
+  redirectTo?: string;
+}) => {
   const { session, profile } = useAuth();
 
-  if (!session) {
-    return <Navigate to={redirectTo} replace />;
-  }
+  if (!session) return <Navigate to={redirectTo} replace />;
 
-  if (roles && !roles.includes(profile?.role || '')) {
+  if (roles && !roles.includes(profile?.role || "")) {
     return <Navigate to="/" replace />;
   }
 
@@ -67,16 +73,18 @@ function App() {
       await fetchAndActivate(remoteConfig);
       const allConfigs = getAll(remoteConfig);
       const configs: { [key: string]: boolean } = {};
+
       Object.entries(allConfigs).forEach(([key, value]) => {
+        // TypeScript infers value correctly here
         configs[key] = value.asBoolean();
       });
+
       setRemoteConfigValues(configs);
     };
 
     fetchConfig();
   }, [setRemoteConfigValues]);
 
-  // Wait for the authentication status to be resolved before rendering any routes
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-100">
@@ -84,165 +92,249 @@ function App() {
       </div>
     );
   }
-  
+
   return (
-      <Routes>
-        {/* Public Routes */}
-        <Route path="/customer/login" element={!session ? <CustomerLogin /> : <Navigate to="/dashboard" replace />} />
-        <Route path="/customer/register" element={!session ? <Register /> : <Navigate to="/dashboard" replace />} />
-        <Route path="/customer/check-email" element={<CheckEmail />} />
-        <Route path="/customer/forgot-password" element={<ForgotPassword />} />
-        <Route path="/password-reset" element={<ResetPassword />} />
-        <Route path="/influencer-program" element={<InfluencerPage />} />
+    <Routes>
+      {/* Public Routes */}
+      <Route
+        path="/customer/login"
+        element={!session ? <CustomerLogin /> : <Navigate to="/dashboard" replace />}
+      />
+      <Route
+        path="/customer/register"
+        element={!session ? <Register /> : <Navigate to="/dashboard" replace />}
+      />
+      <Route path="/customer/check-email" element={<CheckEmail />} />
+      <Route path="/customer/forgot-password" element={<ForgotPassword />} />
+      <Route path="/password-reset" element={<ResetPassword />} />
+      <Route path="/influencer-program" element={<InfluencerPage />} />
 
-        {/* Admin Login and Signup */}
-        <Route path="/admin/login" element={<AdminLogin />} />
-        <Route path="/admin/signup" element={<AdminSignup />} />
+      {/* Admin Login and Signup */}
+      <Route path="/admin/login" element={<AdminLogin />} />
+      <Route path="/admin/signup" element={<AdminSignup />} />
 
-        {/* Root Route */}
-        <Route path="/" element={<IndexPage />} />
-        
-        {/* Private Routes for Logged-in Users */}
-        <Route path="/dashboard" element={
+      {/* Root Route */}
+      <Route path="/" element={<IndexPage />} />
+
+      {/* Private Routes for Logged-in Users */}
+      <Route
+        path="/dashboard"
+        element={
           <PrivateRoute>
             <Dashboard />
           </PrivateRoute>
-        } />
-        <Route path="/profile" element={
+        }
+      />
+      <Route
+        path="/profile"
+        element={
           <PrivateRoute>
             <ProfilePage />
           </PrivateRoute>
-        } />
-        <Route path="/feedback" element={
+        }
+      />
+      <Route
+        path="/feedback"
+        element={
           <PrivateRoute>
             <Feedback />
           </PrivateRoute>
-        } />
-        <Route path="/earn-points" element={
+        }
+      />
+      <Route
+        path="/earn-points"
+        element={
           <PrivateRoute>
             <EarnPoints />
           </PrivateRoute>
-        } />
-        <Route path="/rewards" element={
+        }
+      />
+      <Route
+        path="/rewards"
+        element={
           <PrivateRoute>
             <RewardsPage />
           </PrivateRoute>
-        } />
-        <Route path="/points-history" element={
+        }
+      />
+      <Route
+        path="/points-history"
+        element={
           <PrivateRoute>
             <PointsHistory />
           </PrivateRoute>
-        } />
-        <Route path="/campaigns" element={
+        }
+      />
+      <Route
+        path="/campaigns"
+        element={
           <PrivateRoute>
             <CampaignsPage />
           </PrivateRoute>
-        } />
-        <Route path="/loyalty" element={
+        }
+      />
+      <Route
+        path="/loyalty"
+        element={
           <PrivateRoute>
             <LoyaltyDashboard />
           </PrivateRoute>
-        } />
-        <Route path="/referral" element={
+        }
+      />
+      <Route
+        path="/referral"
+        element={
           <PrivateRoute>
             <ReferralPage />
           </PrivateRoute>
-        } />
+        }
+      />
 
-        {/* Super Admin Routes */}
-        <Route path="/admin/super-admin" element={
-          <PrivateRoute roles={['super_admin']} redirectTo="/admin/login">
+      {/* Super Admin Routes */}
+      <Route
+        path="/admin/super-admin"
+        element={
+          <PrivateRoute roles={["super_admin"]} redirectTo="/admin/login">
             <SuperAdminDashboard />
           </PrivateRoute>
-        } />
-        <Route path="/admin/system-management" element={
-          <PrivateRoute roles={['super_admin']} redirectTo="/admin/login">
+        }
+      />
+      <Route
+        path="/admin/system-management"
+        element={
+          <PrivateRoute roles={["super_admin"]} redirectTo="/admin/login">
             <SystemManagement />
           </PrivateRoute>
-        } />
-        <Route path="/admin/analytics" element={
-          <PrivateRoute roles={['super_admin']} redirectTo="/admin/login">
+        }
+      />
+      <Route
+        path="/admin/analytics"
+        element={
+          <PrivateRoute roles={["super_admin"]} redirectTo="/admin/login">
             <Analytics />
           </PrivateRoute>
-        } />
-        <Route path="/admin/campaigns" element={
-          <PrivateRoute roles={['super_admin', 'franchise_admin']} redirectTo="/admin/login">
+        }
+      />
+      <Route
+        path="/admin/campaigns"
+        element={
+          <PrivateRoute roles={["super_admin", "franchise_admin"]} redirectTo="/admin/login">
             <Campaigns />
           </PrivateRoute>
-        } />
-        <Route path="/admin/qr-codes" element={
-          <PrivateRoute roles={['super_admin']} redirectTo="/admin/login">
+        }
+      />
+      <Route
+        path="/admin/qr-codes"
+        element={
+          <PrivateRoute roles={["super_admin"]} redirectTo="/admin/login">
             <QRCodes />
           </PrivateRoute>
-        } />
-        <Route path="/admin/points-rules" element={
-          <PrivateRoute roles={['super_admin']} redirectTo="/admin/login">
+        }
+      />
+      <Route
+        path="/admin/points-rules"
+        element={
+          <PrivateRoute roles={["super_admin"]} redirectTo="/admin/login">
             <PointsSystemRules />
           </PrivateRoute>
-        } />
+        }
+      />
 
-        {/* Franchise Admin Routes */}
-        <Route path="/admin/franchise-admin" element={
-          <PrivateRoute roles={['franchise_admin']} redirectTo="/admin/login">
+      {/* Franchise Admin Routes */}
+      <Route
+        path="/admin/franchise-admin"
+        element={
+          <PrivateRoute roles={["franchise_admin"]} redirectTo="/admin/login">
             <FranchiseAdminDashboard />
           </PrivateRoute>
-        } />
-        <Route path="/admin/branch-oversight" element={
-          <PrivateRoute roles={['franchise_admin']} redirectTo="/admin/login">
+        }
+      />
+      <Route
+        path="/admin/branch-oversight"
+        element={
+          <PrivateRoute roles={["franchise_admin"]} redirectTo="/admin/login">
             <BranchOversight />
           </PrivateRoute>
-        } />
-        <Route path="/admin/campaign-requests" element={
-          <PrivateRoute roles={['franchise_admin']} redirectTo="/admin/login">
+        }
+      />
+      <Route
+        path="/admin/campaign-requests"
+        element={
+          <PrivateRoute roles={["franchise_admin"]} redirectTo="/admin/login">
             <CampaignRequests />
           </PrivateRoute>
-        } />
-        <Route path="/admin/performance-tracking" element={
-          <PrivateRoute roles={['franchise_admin']} redirectTo="/admin/login">
+        }
+      />
+      <Route
+        path="/admin/performance-tracking"
+        element={
+          <PrivateRoute roles={["franchise_admin"]} redirectTo="/admin/login">
             <PerformanceTracking />
           </PrivateRoute>
-        } />
+        }
+      />
 
-        {/* Branch Staff Routes */}
-        <Route path="/admin/branch-staff" element={
-          <PrivateRoute roles={['branch_staff']} redirectTo="/admin/login">
+      {/* Branch Staff Routes */}
+      <Route
+        path="/admin/branch-staff"
+        element={
+          <PrivateRoute roles={["branch_staff"]} redirectTo="/admin/login">
             <BranchStaffDashboard />
           </PrivateRoute>
-        } />
-        <Route path="/staff/scan-qr" element={
-          <PrivateRoute roles={['branch_staff']} redirectTo="/admin/login">
+        }
+      />
+      <Route
+        path="/staff/scan-qr"
+        element={
+          <PrivateRoute roles={["branch_staff"]} redirectTo="/admin/login">
             <ScanQRPage />
           </PrivateRoute>
-        } />
-        <Route path="/staff/redemptions" element={
-          <PrivateRoute roles={['branch_staff']} redirectTo="/admin/login">
+        }
+      />
+      <Route
+        path="/staff/redemptions"
+        element={
+          <PrivateRoute roles={["branch_staff"]} redirectTo="/admin/login">
             <RedemptionsPage />
           </PrivateRoute>
-        } />
-        <Route path="/staff/feedback" element={
-          <PrivateRoute roles={['branch_staff']} redirectTo="/admin/login">
+        }
+      />
+      <Route
+        path="/staff/feedback"
+        element={
+          <PrivateRoute roles={["branch_staff"]} redirectTo="/admin/login">
             <StaffFeedbackPage />
           </PrivateRoute>
-        } />
-        <Route path="/staff/reports" element={
-          <PrivateRoute roles={['branch_staff']} redirectTo="/admin/login">
+        }
+      />
+      <Route
+        path="/staff/reports"
+        element={
+          <PrivateRoute roles={["branch_staff"]} redirectTo="/admin/login">
             <ReportsPage />
           </PrivateRoute>
-        } />
-        
-        {/* Shared Admin/Staff Route */}
-        <Route path="/admin/edit-profile" element={
-          <PrivateRoute roles={['super_admin', 'franchise_admin', 'branch_staff']} redirectTo="/admin/login">
+        }
+      />
+
+      {/* Shared Admin/Staff Route */}
+      <Route
+        path="/admin/edit-profile"
+        element={
+          <PrivateRoute
+            roles={["super_admin", "franchise_admin", "branch_staff"]}
+            redirectTo="/admin/login"
+          >
             <EditProfilePage />
           </PrivateRoute>
-        } />
-        
-        {/* Role-based redirect route */}
-        <Route path="/redirect" element={<RoleBasedRedirect />} />
-        
-        {/* Fallback Redirect */}
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+        }
+      />
+
+      {/* Role-based redirect route */}
+      <Route path="/redirect" element={<RoleBasedRedirect />} />
+
+      {/* Fallback Redirect */}
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }
 

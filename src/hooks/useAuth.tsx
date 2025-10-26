@@ -26,20 +26,16 @@ interface Profile {
   points?: number;
 }
 
-interface RemoteConfig {
-  [key: string]: boolean;
-}
-
 interface AuthContextType {
   session: Session | null;
   user: User | null;
   profile: Profile | null;
   loading: boolean;
-  remoteConfigValues: RemoteConfig | null;
-  setRemoteConfigValues: (values: RemoteConfig) => void;
   logout: () => void;
   refreshProfile: () => void;
   setProfile: (profile: Profile | null) => void;
+  remoteConfigValues: { [key: string]: boolean };
+  setRemoteConfigValues: (values: { [key: string]: boolean }) => void;
 }
 
 // --- AUTH CONTEXT ---
@@ -51,7 +47,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [loading, setLoading] = useState(true);
-  const [remoteConfigValues, setRemoteConfigValues] = useState<RemoteConfig | null>(null);
+  const [remoteConfigValues, setRemoteConfigValues] = useState<{ [key: string]: boolean }>({});
 
   const fetchProfile = useCallback(async (user: User) => {
     try {
@@ -154,12 +150,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     user,
     profile,
     loading,
-    remoteConfigValues,
-    setRemoteConfigValues,
     logout,
     refreshProfile,
     setProfile,
-  }), [session, user, profile, loading, remoteConfigValues, logout, refreshProfile]);
+    remoteConfigValues,
+    setRemoteConfigValues,
+  }), [session, user, profile, loading, logout, refreshProfile, remoteConfigValues]);
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };

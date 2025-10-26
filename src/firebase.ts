@@ -1,25 +1,24 @@
 
 import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage";
 import { getRemoteConfig } from "firebase/remote-config";
 
+// TODO: Add your Firebase project's configuration object here
 const firebaseConfig = {
-  apiKey: "AIzaSyB_LpqFQJO-tR0IC40Gi6TN9wxfs9sTuwk",
-  authDomain: "takoyadon-system.firebaseapp.com",
-  projectId: "takoyadon-system",
-  storageBucket: "takoyadon-system.firebasestorage.app",
-  messagingSenderId: "10414790620",
-  appId: "1:10414790620:web:23956e64b938d24a8d6119"
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+  appId: "YOUR_APP_ID"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// Initialize Remote Config
+const db = getFirestore(app);
+const auth = getAuth(app);
+const storage = getStorage(app);
 const remoteConfig = getRemoteConfig(app);
 
-// Set default values
-remoteConfig.defaultConfig = {
-  "referral_feature_enabled": false,
-};
-
-export { remoteConfig, app };
+export { db, auth, storage, remoteConfig, app };
