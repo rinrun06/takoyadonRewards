@@ -1,0 +1,226 @@
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-26T04:01:24.257Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-26T04:01:24.260Z] > authorizing via signed-in user (marketing.negofood@gmail.com)
+[debug] [2025-10-26T04:01:24.288Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.290Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.294Z] > refreshing access token with scopes: []
+[debug] [2025-10-26T04:01:24.312Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-26T04:01:24.313Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:24.416Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.416Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.416Z] > refreshing access token with scopes: []
+[debug] [2025-10-26T04:01:24.418Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-26T04:01:24.418Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:24.433Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.434Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.435Z] > refreshing access token with scopes: []
+[debug] [2025-10-26T04:01:24.437Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-26T04:01:24.438Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:24.495Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.496Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.496Z] > refreshing access token with scopes: []
+[debug] [2025-10-26T04:01:24.497Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-26T04:01:24.497Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:24.501Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.502Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.502Z] > refreshing access token with scopes: []
+[debug] [2025-10-26T04:01:24.503Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-26T04:01:24.503Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:24.505Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-26T04:01:24.506Z] > authorizing via signed-in user (marketing.negofood@gmail.com)
+[debug] [2025-10-26T04:01:24.508Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.508Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.508Z] > refreshing access token with scopes: []
+[debug] [2025-10-26T04:01:24.508Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-26T04:01:24.509Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:24.512Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.512Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.512Z] > refreshing access token with scopes: []
+[debug] [2025-10-26T04:01:24.512Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-26T04:01:24.513Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:24.515Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.515Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.515Z] > refreshing access token with scopes: []
+[debug] [2025-10-26T04:01:24.515Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-26T04:01:24.515Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:24.518Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.518Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.518Z] > refreshing access token with scopes: []
+[debug] [2025-10-26T04:01:24.519Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-26T04:01:24.519Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:24.528Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.529Z] Checked if tokens are valid: false, expires at: 1761450577390
+[debug] [2025-10-26T04:01:24.529Z] > refreshing access token with scopes: []
+[debug] [2025-10-26T04:01:24.532Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-10-26T04:01:24.532Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:24.972Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-26T04:01:24.974Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:25.053Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseio.com [none]
+[debug] [2025-10-26T04:01:25.061Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseio.com x-goog-quota-user=projects/takoyadon-system
+[debug] [2025-10-26T04:01:25.103Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-26T04:01:25.103Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:25.154Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firestore.googleapis.com [none]
+[debug] [2025-10-26T04:01:25.157Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firestore.googleapis.com x-goog-quota-user=projects/takoyadon-system
+[debug] [2025-10-26T04:01:25.161Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-26T04:01:25.162Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:25.171Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseio.com [none]
+[debug] [2025-10-26T04:01:25.171Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseio.com x-goog-quota-user=projects/takoyadon-system
+[debug] [2025-10-26T04:01:25.181Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-26T04:01:25.181Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:25.198Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-10-26T04:01:25.198Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/takoyadon-system
+[debug] [2025-10-26T04:01:25.203Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-26T04:01:25.203Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:25.214Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-10-26T04:01:25.214Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/takoyadon-system
+[debug] [2025-10-26T04:01:25.310Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-26T04:01:25.314Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:25.351Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-10-26T04:01:25.352Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/takoyadon-system
+[debug] [2025-10-26T04:01:25.392Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-26T04:01:25.399Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:25.428Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firestore.googleapis.com [none]
+[debug] [2025-10-26T04:01:25.438Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firestore.googleapis.com x-goog-quota-user=projects/takoyadon-system
+[debug] [2025-10-26T04:01:25.633Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-26T04:01:25.636Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:25.656Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-10-26T04:01:25.656Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/takoyadon-system
+[debug] [2025-10-26T04:01:25.661Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-26T04:01:25.661Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:25.669Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-10-26T04:01:25.670Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/takoyadon-system
+[debug] [2025-10-26T04:01:25.673Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-10-26T04:01:25.674Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-10-26T04:01:25.693Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-10-26T04:01:25.693Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/takoyadon-system
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-26T04:01:26.501Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-26T04:01:26.501Z] > authorizing via signed-in user (marketing.negofood@gmail.com)
+[debug] [2025-10-26T04:01:26.502Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.502Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.503Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.503Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.503Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.503Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.505Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.505Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.505Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.505Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.506Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firestore.googleapis.com [none]
+[debug] [2025-10-26T04:01:26.506Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firestore.googleapis.com x-goog-quota-user=projects/takoyadon-system
+[debug] [2025-10-26T04:01:26.507Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-10-26T04:01:26.508Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/takoyadon-system
+[debug] [2025-10-26T04:01:26.512Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-10-26T04:01:26.512Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/takoyadon-system
+[debug] [2025-10-26T04:01:26.516Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-10-26T04:01:26.516Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/takoyadon-system
+[debug] [2025-10-26T04:01:26.518Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseio.com [none]
+[debug] [2025-10-26T04:01:26.518Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseio.com x-goog-quota-user=projects/takoyadon-system
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-26T04:01:26.523Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-26T04:01:26.524Z] > authorizing via signed-in user (marketing.negofood@gmail.com)
+[debug] [2025-10-26T04:01:26.525Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.525Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.526Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.526Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.526Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.526Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.527Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.527Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.528Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.528Z] Checked if tokens are valid: true, expires at: 1761454884674
+[debug] [2025-10-26T04:01:26.528Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firestore.googleapis.com [none]
+[debug] [2025-10-26T04:01:26.528Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firestore.googleapis.com x-goog-quota-user=projects/takoyadon-system
+[debug] [2025-10-26T04:01:26.530Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-10-26T04:01:26.530Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/takoyadon-system
+[debug] [2025-10-26T04:01:26.532Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-10-26T04:01:26.532Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/takoyadon-system
+[debug] [2025-10-26T04:01:26.534Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-10-26T04:01:26.534Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/takoyadon-system
+[debug] [2025-10-26T04:01:26.536Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseio.com [none]
+[debug] [2025-10-26T04:01:26.536Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseio.com x-goog-quota-user=projects/takoyadon-system
+[debug] [2025-10-26T04:01:26.768Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseio.com 403
+[debug] [2025-10-26T04:01:26.769Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseio.com [omitted]
+[debug] [2025-10-26T04:01:26.773Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseio.com 403
+[debug] [2025-10-26T04:01:26.774Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseio.com [omitted]
+[debug] [2025-10-26T04:01:26.794Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-10-26T04:01:26.794Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-10-26T04:01:26.884Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firestore.googleapis.com 200
+[debug] [2025-10-26T04:01:26.886Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firestore.googleapis.com [omitted]
+[debug] [2025-10-26T04:01:26.891Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firestore.googleapis.com 200
+[debug] [2025-10-26T04:01:26.892Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firestore.googleapis.com [omitted]
+[debug] [2025-10-26T04:01:26.897Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-10-26T04:01:26.898Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-10-26T04:01:26.903Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/cloudfunctions.googleapis.com 200
+[debug] [2025-10-26T04:01:26.906Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-10-26T04:01:26.915Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/cloudfunctions.googleapis.com 200
+[debug] [2025-10-26T04:01:26.915Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-10-26T04:01:26.920Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-10-26T04:01:26.921Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseapphosting.googleapis.com [omitted]
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-26T04:01:26.935Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-26T04:01:26.936Z] > authorizing via signed-in user (marketing.negofood@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-26T04:01:26.952Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-26T04:01:26.954Z] > authorizing via signed-in user (marketing.negofood@gmail.com)
+[debug] [2025-10-26T04:01:26.958Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-10-26T04:01:26.960Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseapphosting.googleapis.com [omitted]
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-26T04:01:27.127Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-26T04:01:27.127Z] > authorizing via signed-in user (marketing.negofood@gmail.com)
+[debug] [2025-10-26T04:01:27.129Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-26T04:01:27.129Z] > authorizing via signed-in user (marketing.negofood@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-26T04:01:27.135Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-26T04:01:27.135Z] > authorizing via signed-in user (marketing.negofood@gmail.com)
+[debug] [2025-10-26T04:01:27.138Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-26T04:01:27.138Z] > authorizing via signed-in user (marketing.negofood@gmail.com)
+[debug] [2025-10-26T04:01:27.625Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseio.com 403
+[debug] [2025-10-26T04:01:27.626Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseio.com [omitted]
+[debug] [2025-10-26T04:01:27.664Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firestore.googleapis.com 200
+[debug] [2025-10-26T04:01:27.665Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firestore.googleapis.com [omitted]
+[debug] [2025-10-26T04:01:27.699Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-10-26T04:01:27.701Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-10-26T04:01:27.704Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/cloudfunctions.googleapis.com 200
+[debug] [2025-10-26T04:01:27.704Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-10-26T04:01:27.753Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-10-26T04:01:27.753Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2025-10-26T04:01:27.756Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-10-26T04:01:27.757Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseapphosting.googleapis.com [omitted]
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-26T04:01:27.765Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-26T04:01:27.779Z] > authorizing via signed-in user (marketing.negofood@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-26T04:01:27.834Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-26T04:01:27.834Z] > authorizing via signed-in user (marketing.negofood@gmail.com)
+[debug] [2025-10-26T04:01:27.850Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firestore.googleapis.com 200
+[debug] [2025-10-26T04:01:27.850Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firestore.googleapis.com [omitted]
+[debug] [2025-10-26T04:01:27.887Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseio.com 403
+[debug] [2025-10-26T04:01:27.938Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebaseio.com [omitted]
+[debug] [2025-10-26T04:01:27.998Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-10-26T04:01:28.028Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-10-26T04:01:28.069Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/cloudfunctions.googleapis.com 200
+[debug] [2025-10-26T04:01:28.070Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/takoyadon-system/services/cloudfunctions.googleapis.com [omitted]
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-26T04:01:28.075Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-26T04:01:28.075Z] > authorizing via signed-in user (marketing.negofood@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-10-26T04:01:28.077Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-10-26T04:01:28.077Z] > authorizing via signed-in user (marketing.negofood@gmail.com)
