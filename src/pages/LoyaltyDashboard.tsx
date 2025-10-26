@@ -115,7 +115,7 @@ export default function LoyaltyDashboard() {
               <div className="space-y-4">
                 {rewards_catalog.map(reward => (
                   <div key={reward.id} className="bg-white shadow-md rounded-lg overflow-hidden">
-                    {reward.image_url && <img src={reward.image__url} alt={reward.name} className="w-full h-32 object-cover"/>}
+                    {reward.image_url && <img src={reward.image_url} alt={reward.name} className="w-full h-32 object-cover"/>}
                     <div className="p-4">
                         <h3 className="text-xl font-semibold text-gray-800">{reward.name}</h3>
                         <p className="text-sm text-gray-500 my-1">{reward.description}</p>
